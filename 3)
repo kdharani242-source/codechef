@@ -1,0 +1,57 @@
+Farmers League
+A football league of 
+N
+N teams is taking place, where each team plays other teams once in single round robin fashion. A team gets 
+3
+3 points for winning a game and 
+0
+0 for losing (assume that no games end in a draw/tie). What is the maximum possible difference of points between the winning team and the second-placed team?
+
+Input Format
+The first line of input will contain a single integer 
+T
+T, denoting the number of test cases. Then the test cases follow.
+Each test case consists of a single line of input, containing a single integer 
+N
+N.
+Output Format
+For each test case, output in a single line the maximum difference of points between first and second place.
+
+Constraints
+1
+≤
+T
+≤
+10
+5
+1≤T≤10 
+5
+ 
+2
+≤
+N
+≤
+10
+9
+2≤N≤10 
+9
+ 
+Sample 1:
+Input
+Output
+4
+2
+3
+4
+9
+output
+3
+3
+6
+12
+sol)# cook your dish here
+t=int(input())
+for i in range(t):
+    x=int(input())
+    print(3*(x//2))
+    
