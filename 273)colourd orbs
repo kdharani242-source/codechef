@@ -1,0 +1,5 @@
+r,b=map(int,input().split())
+if(r>b):
+    print((b*5)+(r-b))
+else:
+    print((r*5)+(b-r)*2)
