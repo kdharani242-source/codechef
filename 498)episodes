@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int n,k;
+	    int a;
+	    scanf("%d %d",&n,&k);
+	    a=n*k;
+	    int b,c;
+	    b=a/60;
+	    c=a%60;
+	    printf("%d %d\n",b,c);
+	}
+	
+	
+
+}
+
