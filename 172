@@ -1,0 +1,53 @@
+Bitcoin Market
+Chef has recently started investing in Bitcoin.
+He assigns a market risk level 
+R
+R (from 
+1
+1 to 
+10
+10), where:
+
+1
+1 means the market is very safe,
+10
+10 means the market is very risky.
+Chef will buy Bitcoin only if the risk level is 
+4
+4 or less.
+
+Given the current risk level 
+R
+R, determine whether Chef should buy Bitcoin.
+
+
+
+
+//SOLUTION
+//PYTHON
+n=int(input())
+if(n<=4):
+    print("YES")
+else:
+    print("NO")
+
+//C
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int n;
+	scanf("%d",&n);
+	if(n<=4){
+	    printf("YES");
+	}
+	else{
+	    printf("NO");
+	}
+	
+
+}
+
+
+
+Print "YES" if Chef should buy, otherwise print "NO".
