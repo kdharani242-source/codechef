@@ -1,0 +1,32 @@
+Playing with Toys
+Chef got 
+N
+N toys for his birthday. Everyday, if he has at least one toy with him, he plays with one specific toy for that day.
+
+Unfortunately, Chef is very careless, and will inevitably break that toy by the end of the day. When he does break it, he does not play with a new toy but just waits for the next day.
+
+After 
+M
+M days, how many toys will Chef be left with?
+
+//SOLUTION
+n,m=map(int,input().split())
+if(n<=m):
+    print(0)
+else:
+    print(n-m)
+//in c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int n,m;
+	scanf("%d %d",&n,&m);
+	if(n<=m){
+	    printf("%d",0);
+	}
+	else{
+	    printf("%d",n-m);
+	}
+
+}
