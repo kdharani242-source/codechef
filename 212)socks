@@ -1,0 +1,34 @@
+Chef and Socks
+Chef needs 
+A
+A dollars to buy himself a new pair of socks for Christmas.
+If he has 
+X
+X dollars saved up and his parents give him an additional 
+Y
+Y dollars, will Chef be able to buy new socks?
+
+//python
+a,x,y=map(int,input().split())
+if(a<=(x+y)):
+    print("YES")
+else:
+    print("NO")
+
+
+//in c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int a,x,y;
+	scanf("%d %d %d",&a,&x,&y);
+	if(a<=(x+y)){
+	    printf("yes");
+	}
+	else{
+	    printf("no");
+	}
+
+}
+
