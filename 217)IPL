@@ -1,0 +1,23 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int x;
+	scanf("%d",&x);
+	if(x>=7){
+	    printf("thala");
+	}
+	else{
+	    printf("boom");
+	}
+
+}
+
+
+//python
+x=int(input())
+if(x>=7):
+    print("thala")
+else:
+    print("boom")
