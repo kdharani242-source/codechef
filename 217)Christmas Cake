@@ -1,0 +1,16 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes 
+	int x;
+	scanf("%d",&x);
+	printf("%d",(25-x));
+
+}
+
+
+
+//python
+x=int(input())
+print(25-x)
