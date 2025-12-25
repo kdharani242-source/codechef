@@ -1,0 +1,22 @@
+x=int(input())
+if(x>=1 and x<=8):
+    print("yes")
+else:
+    print("no")
+
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int x;
+	scanf("%d",&x);
+	if(x>=1 & x<=8){
+	    printf("yes");
+	}
+	else{
+	    printf("no");
+	}
+
+}
+
