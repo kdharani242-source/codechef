@@ -1,0 +1,12 @@
+//python
+t=int(input())
+for i in range(t):
+    pa,pb,qa,qb=map(int,input().split())
+    pb1=max(pa,pb)
+    qb1=max(qa,qb)
+    if(pb1<qb1):
+        print("p")
+    elif(pb1>qb1):
+        print("q")
+    else:
+        print("tie")
