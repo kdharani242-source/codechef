@@ -1,0 +1,26 @@
+//c
+#include <stdio.h>
+
+int main() {
+  int T, A, B, C;
+  scanf("%d", &T);
+
+  while (T--) {
+    scanf("%d %d %d", &A, &B, &C);
+    int max = A;
+    if (B > max) {
+      max = B;
+    }
+    if (C > max) {
+      max = C;
+    }
+    printf("%d\n", max);
+  }
+  return 0;
+}
+
+//python
+t=int(input())
+for i in range(t):
+   a,b,c=map(int,input().split())
+   print(max(a,b,c))
