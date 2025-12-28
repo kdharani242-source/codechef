@@ -1,0 +1,51 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes 
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int x,y;
+	    scanf("%d %d",&x,&y);
+	    int even=0;
+	    int odd=0;
+	    for(int i=x;i<y+1;i++){
+	        if(i%x==0){
+	            if(i%2==0){
+	                even+=i;
+	            }
+	            else{
+	                odd+=i;
+	            }
+	        }
+	    }
+	    if(even>=odd){
+	        printf("yes\n");
+	    }
+	    else{
+	        printf("no\n");
+	    }
+	}
+
+}
+
+
+//python
+def solve():
+    x,y=map(int,input().split())
+    even=0
+    odd=0
+    for i in range(x,y+1):
+        if(i%x==0):
+            if(i%2==0):
+                even+=i
+            else:
+                odd+=i
+    if(even>=odd):
+        print("yes")
+    else:
+        print("no")
+t=int(input())
+for j in range(t):
+    solve()
