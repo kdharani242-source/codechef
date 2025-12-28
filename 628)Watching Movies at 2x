@@ -1,0 +1,15 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int x,y;
+	scanf("%d %d",&x,&y);
+	printf("%d",(x-y)+(y/2));
+
+}
+
+
+//python
+x,y=map(int,input().split())
+print("{:.0f}".format((x-y)+(y/2)))
