@@ -1,0 +1,15 @@
+def solve():
+    n = int(input())
+    a = list(map(int, input().split()))
+    
+    current_brick = 1  # Initially, Chef has the first brick
+    
+    for i in range(1, n):
+        if a[i] > a[current_brick - 1]:
+            current_brick = i + 1
+            
+    print(current_brick)
+
+t = int(input())
+for _ in range(t):
+    solve()
