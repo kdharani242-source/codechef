@@ -1,0 +1,36 @@
+//python
+t=int(input())
+for i in range(t):
+    n=int(input())
+    if(n>=1 and n<=10):
+        print("Lower Double")
+    elif(n>=11 and n<=15):
+        print("Lower Single")
+    elif(n>=16 and n<=25):
+        print("Upper Double")
+    else:
+        print("Upper Single")
+
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int n;
+	    scanf("%d",&n);
+	    if(1<=n && n<=10){
+	        printf("Lower Double\n");
+	    }
+	    else if(11<=n && n<=15){
+	        printf("Lower Single\n");
+	    }
+	    else if(16<=n && n<=25){
+	        printf("Upper Double\n");
+	    }
+	    else{
+	        printf("Upper Single\n");
+	    }
+	}
