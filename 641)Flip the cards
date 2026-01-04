@@ -1,0 +1,24 @@
+//python
+for _ in range(int(input())):
+    n, k = map(int, input().split())
+    print(min(k, n - k))
+
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int n,x;
+	    scanf("%d %d",&n,&x);
+	    if(x>n-x){
+	        printf("%d\n",n-x);
+	    }
+	    else{
+	        printf("%d\n",x);
+	    }
+	}
+
+}
