@@ -1,0 +1,21 @@
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    n,x=map(int,input().split())
+    print(n//(3*x))
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes 
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int n,x;
+	    scanf("%d %d",&n,&x);
+	    printf("%d\n",(n/(3*x)));
+	}
+
+}
+
