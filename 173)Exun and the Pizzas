@@ -1,0 +1,14 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int n,k,r;
+	scanf("%d %d %d",&n,&k,&r);
+	printf("%d",((n-k)*r));
+
+}
+
+//python
+n,k,r=map(int,input().split())
+print((n-k)*r)
