@@ -1,0 +1,22 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int x;
+	scanf("%d",&x);
+	if(x>=10){
+	    printf("yes");
+	}
+	else{
+	    printf("no");
+	}
+
+}
+
+//python
+x=int(input())
+if(x>=10):
+    print("yes")
+else:
+    print("no")
