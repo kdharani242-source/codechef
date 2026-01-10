@@ -1,0 +1,20 @@
+//c
+include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int x;
+	    scanf("%d",&x);
+	    printf("%d\n",(100-x));
+	}
+
+}
+
+//python
+t=int(input())
+for i in range(t):
+    x=int(input())
+    print(100-x)
