@@ -1,0 +1,15 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int x,y;
+	scanf("%d %d",&x,&y);
+	printf("%d",((x*30)+(y*60)));
+
+}
+
+//python
+# cook your dish here
+x,y=map(int,input().split())
+print((x*30)+(y*60))
