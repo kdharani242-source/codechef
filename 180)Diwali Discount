@@ -1,0 +1,15 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int a,b;
+	scanf("%d %d",&a,&b);
+	printf("%d",(a-b));
+
+}
+
+//python
+# cook your dish her
+a,b=map(int,input().split())
+print(a-b)
