@@ -1,0 +1,17 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int x;
+	scanf("%d",&x);
+	char str[5];
+	sprintf(str,"%d",x);
+	printf("k%c%c",str[2],str[3]);
+
+}
+
+//python
+# cook your dish here
+x=str(int(input()))
+print('k'+x[2]+x[3])
