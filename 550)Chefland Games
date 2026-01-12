@@ -1,0 +1,32 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int a,b,c,d;
+	    scanf("%d %d %d %d",&a,&b,&c,&d);
+	    int sum=a+b+c+d;
+	    if(sum==0){
+	        printf("in\n");
+	    }
+	    else{
+	        printf("out\n");
+	    }
+	}
+
+}
+
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    a,b,c,d=map(int,input().split())
+    sum_all=a+b+c+d;
+    if(sum_all==0):
+        print('in')
+    else:
+        print('out')
