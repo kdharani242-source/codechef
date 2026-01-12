@@ -1,0 +1,53 @@
+// Code your design here
+// Code your design here
+module bin_to_bcd (
+    input  [3:0] bin,
+    output reg [7:0] bcd   // bcd[7:4] = tens, bcd[3:0] = ones
+);
+    integer i;
+  always@(*) begin 
+    if(bin>=10) begin
+      bcd=bin+6;
+    end
+  end
+endmodule
+
+// Code your testbench here
+// or browse Examples
+module tb_bin_to_bcd;
+  reg  [3:0] bin;
+  wire [7:0] bcd;
+
+  // DUT instantiation
+  bin_to_bcd dut (.bin(bin),.bcd(bcd));
+  initial begin
+    $display("Binary   Decimal   BCD(Tens Ones)");
+    $display("--------------------------------");
+    for(int i=0;i<16;i++) begin
+      bin=i;#1;
+    end
+  end
+  initial begin
+    $monitor("  %b      %0d        %b %b",bin, bin,bcd[7:4],bcd[3:0]);
+  end
+endmodule
+
+//output
+# KERNEL: Binary   Decimal   BCD(Tens Ones)
+# KERNEL: --------------------------------
+# KERNEL:   0000      0        0000 0000
+# KERNEL:   0001      1        0000 0001
+# KERNEL:   0010      2        0000 0010
+# KERNEL:   0011      3        0000 0011
+# KERNEL:   0100      4        0000 0100
+# KERNEL:   0101      5        0000 0101
+# KERNEL:   0110      6        0000 0110
+# KERNEL:   0111      7        0000 0111
+# KERNEL:   1000      8        0000 1000
+# KERNEL:   1001      9        0000 1001
+# KERNEL:   1010      10        0001 0000
+# KERNEL:   1011      11        0001 0001
+# KERNEL:   1100      12        0001 0010
+# KERNEL:   1101      13        0001 0011
+# KERNEL:   1110      14        0001 0100
+# KERNEL:   1111      15        0001 0101
