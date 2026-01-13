@@ -1,0 +1,29 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int a,b,x,y;
+	    scanf("%d %d %d %d",&a,&b,&x,&y);
+	    if(x*y>=a*b){
+	        printf("yes\n");
+	    }
+	    else{
+	        printf("no\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    a,b,x,y=map(int,input().split())
+    if(x*y>=a*b):
+        print('yes')
+    else:
+        print('no')
