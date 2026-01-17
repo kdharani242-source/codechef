@@ -1,0 +1,33 @@
+//python
+t = int(input())
+
+while t > 0:
+    n, x = map(int, input().split())
+    # Your code goes 
+    k=str(n*x)
+    if((k[0]==0 and len(k)==5) or len(k)<5 or len(k)>5):
+        print('no')
+    else:
+        print('yes')
+    t -= 1
+//c
+#include <stdio.h>
+
+int main() {
+    int t;
+    scanf("%d", &t);
+
+    while (t--) {
+        int n, x;
+        scanf("%d %d", &n, &x);
+        // Your code goes here
+        int tot = n * x;
+        if (tot >= 10000 && tot <= 99999) {  
+            printf("Yes\n");
+        } else {
+            printf("No\n");
+        }
+        
+    }
+
+}
