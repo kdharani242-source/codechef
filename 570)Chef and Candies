@@ -1,0 +1,35 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int n,x;
+	    scanf("%d %d",&n,&x);
+	    if((n-x)>0){
+	        if((n-x)%4==0){
+	            printf("%d\n",(n-x)/4);
+	        }
+	        else{
+	            printf("%d\n",((n-x)/4)+1);
+	        }
+	    }
+	    else{
+	        printf("%d\n",0);
+	    }
+	}
+
+}
+
+//python
+# cook your dish 
+import math
+t=int(input())
+for i in range(t):
+    N,X=map(int,input().split())
+    needed_candies = max(0, N - X)
+    packets = math.ceil(needed_candies / 4)
+    print(packets)
+   
