@@ -1,0 +1,11 @@
+//python
+import math
+
+def solve():
+    n = int(input())
+    root = int(math.sqrt(n))
+    print(root * root)
+
+t = int(input())
+for _ in range(t):
+    solve()
