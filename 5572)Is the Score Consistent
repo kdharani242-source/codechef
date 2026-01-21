@@ -1,0 +1,32 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int a,b;
+	    scanf("%d %d",&a,&b);
+	    int c,d;
+	    scanf("%d %d",&c,&d);
+	    if(a<=c && b<=d){
+	        printf("possible\n");
+	    }
+	    else{
+	        printf("impossible\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    a,b=map(int,input().split())
+    c,d=map(int,input().split())
+    if(a<=c and b<=d):
+        print("possible")
+    else:
+        print("impossible")
