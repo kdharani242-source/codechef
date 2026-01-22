@@ -1,0 +1,23 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int a,b;
+	scanf("%d %d",&a,&b);
+	if(a==b){
+	    printf("yes\n");
+	}
+	else{
+	    printf("no");
+	}
+
+}
+
+//python
+# cook your dish here
+a,b=map(int,input().split())
+if(a==b):
+    print("yes")
+else:
+    print("no")
