@@ -1,0 +1,23 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int x,y;
+	scanf("%d %d",&x,&y);
+	if(x*y>=100){
+	    printf("yes");
+	}
+	else{
+	    printf("no");
+	}
+
+}
+
+//python
+# cook your dish here
+x,y=map(int,input().split())
+if(x*y>=100):
+    print("yes")
+else:
+    print("no")
