@@ -1,0 +1,38 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+    scanf("%d", &t); // Read the number of test cases
+
+    while (t--) {
+        int a, b, c;
+        scanf("%d %d %d", &a, &b, &c);
+
+        // Check if the maximum of a and c is less than or equal to b
+        int max_ac = (a > c) ? a : c;  // Find the maximum of a and c
+
+        if (max_ac <= b) {
+            printf("Yes\n");
+        } else {
+            printf("No\n");
+        }
+    }
+
+    return 0;
+
+}
+
+//python
+# cook your dish here
+def solve():
+    a, b, c = map(int, input().split())
+    if max(a, c) <= b:
+        print("Yes")
+    else:
+        print("No")
+
+t = int(input())
+for _ in range(t):
+    solve()
