@@ -1,0 +1,33 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int p,q,r,s;
+	    scanf("%d %d %d %d",&p,&q,&r,&s);
+	    if(p > q + r + s | q > p + r + s | r > p + q + s | s > p + q + r){
+	        printf("yes\n");
+	    }
+	    else{
+	        printf("no\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+def solve():
+    p, q, r, s = map(int, input().split())
+    
+    if p > q + r + s or q > p + r + s or r > p + q + s or s > p + q + r:
+        print("YES")
+    else:
+        print("NO")
+
+t = int(input())
+for _ in range(t):
+    solve()
