@@ -1,0 +1,36 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int a,b;
+	    scanf("%d %d",&a,&b);
+	    if(100-a<200-(2*b)){
+	        printf("first\n");
+	    }
+	    else if(100-a>200-(2*b)){
+	        printf("second\n");
+	    }
+	    else{
+	        printf("both\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+def solve():
+    a,b=map(int,input().split())
+    if(100-a<200-(2*b)):
+        print("first")
+    elif(100-a>200-(2*b)):
+        print("second")
+    else:
+        print("both")
+t=int(input())
+for i in range(t):
+    solve()
