@@ -1,0 +1,38 @@
+//c
+#include <stdio.h>
+
+int main() {
+    int t;
+    scanf("%d", &t);
+
+    while (t--) {
+        int n;
+        scanf("%d", &n);
+
+        int li[100]; // Assuming n <= 100, declare a fixed-size array
+        for (int i = 0; i < n; i++) {
+            scanf("%d", &li[i]);
+        }
+
+        int sum = 0; // Reset sum for each test case
+        for (int i = 0; i < n; i++) {
+            sum += (i + 1) * li[i];
+        }
+
+        printf("%d\n", sum); // Print sum followed by a newline
+    }
+
+    return 0;
+}
+//python
+# cook your dis
+def solve():
+    sum_total=0
+    n=int(input())
+    li=list(map(int,input().split()))
+    for i in range(n):
+        sum_total+=(i+1)*li[i]
+    print(sum_total)
+t=int(input())
+for j in range(t):
+    solve()
