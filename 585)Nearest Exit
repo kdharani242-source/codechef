@@ -1,0 +1,30 @@
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    x=int(input())
+    if(x<=50):
+        print("left")
+    else:
+        print("right")
+
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int x;
+	    scanf("%d",&x);
+	    if(x<=50){
+	        printf("left\n");
+	    }
+	    else{
+	        printf("right\n");
+	    }
+	}
+
+}
+
