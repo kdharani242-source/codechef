@@ -1,0 +1,11 @@
+//python
+def reverse_number(n):
+    n_str = str(n)
+    reversed_str = n_str[::-1]
+    reversed_num = int(reversed_str)
+    return reversed_num
+
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    print(reverse_number(n))
