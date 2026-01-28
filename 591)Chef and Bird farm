@@ -1,0 +1,43 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int x,y,z;
+	    scanf("%d %d %d",&x,&y,&z);
+	    if( z % x == 0 && z % y != 0){
+        printf("CHICKEN\n");
+	    }
+        else if (z % x != 0 && z % y == 0){
+        printf("DUCK\n");
+        }
+       else if (z % x == 0 && z % y == 0){
+        printf("ANY\n");
+       }
+       else{
+        printf("NONE\n");
+       }
+	}
+
+}
+
+//python
+# cook your dish here
+def solve():
+    x, y, z = map(int, input().split())
+    
+    if z % x == 0 and z % y != 0:
+        print("CHICKEN")
+    elif z % x != 0 and z % y == 0:
+        print("DUCK")
+    elif z % x == 0 and z % y == 0:
+        print("ANY")
+    else:
+        print("NONE")
+
+t = int(input())
+for _ in range(t):
+    solve()
