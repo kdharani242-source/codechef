@@ -1,0 +1,41 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int a,b;
+	    scanf("%d %d",&a,&b);
+	    if(a*10>b*5){
+	        printf("first\n");
+	    }
+	    else if(b*5>a*10){
+	        printf("second\n");
+	    }
+	    else{
+	        printf("any\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+def solve():
+    a, b = map(int, input().split())
+    
+    valuation_a = a * 10
+    valuation_b = b * 5
+    
+    if valuation_a > valuation_b:
+        print("FIRST")
+    elif valuation_b > valuation_a:
+        print("SECOND")
+    else:
+        print("ANY")
+
+t = int(input())
+for _ in range(t):
+    solve()
