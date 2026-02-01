@@ -1,0 +1,29 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int x,a,b;
+	    scanf("%d %d %d",&x,&a,&b);
+	    if(x<=(b*2)+a){
+	        printf("qualify\n");
+	    }
+	    else{
+	        printf("notqualify\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    x,a,b=map(int,input().split())
+    if(x<=(a*1)+(b*2)):
+        print("qualify")
+    else:
+        print("notqualify")
