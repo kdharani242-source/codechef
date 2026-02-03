@@ -1,0 +1,31 @@
+def solve():
+  r, b, g = map(int, input().split())
+  bundles = min(r, b, g)
+  remaining_gems = r + b + g - 3 * bundles
+  total_coins = bundles * 10 + remaining_gems * 3
+  print(total_coins)
+
+t = int(input())
+for _ in range(t):
+  solve()
+
+  //c
+  #include <stdio.h>
+
+int main() {
+  int t;
+  scanf("%d", &t);
+
+  while (t--) {
+    int r, b, g;
+    scanf("%d %d %d", &r, &b, &g);
+
+    int bundles = r < b ? (r < g ? r : g) : (b < g ? b : g);
+    int remaining_gems = r + b + g - 3 * bundles;
+    int total_coins = bundles * 10 + remaining_gems * 3;
+
+    printf("%d\n", total_coins);
+  }
+
+  return 0;
+}
