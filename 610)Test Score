@@ -1,0 +1,32 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int n,x,y;
+	    scanf("%d %d %d",&n,&x,&y);
+	    if(y%x==0 && y/x<=n){
+	        printf("yes\n");
+	    }
+	    else{
+	        printf("no\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+def solve():
+    n, x, y = map(int, input().split())
+    if y % x == 0 and y // x <= n:
+        print("YES")
+    else:
+        print("NO")
+
+t = int(input())
+for _ in range(t):
+    solve()
