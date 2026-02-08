@@ -1,0 +1,29 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int a,b;
+	    scanf("%d %d",&a,&b);
+	    if(b%a==0){
+	        printf("yes\n");
+	    }
+	    else{
+	        printf("no\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    a,b=map(int,input().split())
+    if(b%a==0):
+        print("yes")
+    else:
+        print("no")
