@@ -1,0 +1,24 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int x;
+	scanf("%d",&x);
+	if(100+(4*x)>300){
+	    printf("%d",300);
+	}
+	else{
+	    printf("%d",100+(4*x));
+	}
+
+}
+
+//python
+# cook your dish here
+x=int(input())
+if(100+(4*x)>300):
+    print(300)
+else:
+    print(100+(4*x))
+    
