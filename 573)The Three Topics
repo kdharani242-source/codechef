@@ -1,0 +1,22 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int a,b,c,x;
+	scanf("%d %d %d %d",&a,&b,&c,&x);
+	if(x==a || x==b || x==c){
+	    printf("yes");
+	}
+	else{
+	    printf("no");
+	}
+
+}
+
+//python
+a,b,c,x=map(int,input().split())
+if(x==a or x==b or x==c):
+    print("yes")
+else:
+    print("no")
