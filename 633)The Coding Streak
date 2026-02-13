@@ -1,0 +1,43 @@
+//c
+#include <stdio.h>
+
+int main() {
+    int t;
+    scanf("%d", &t);
+    while (t--) {
+        int n;
+        scanf("%d", &n);
+        int a[n];
+        int max_streak = 0;
+        int current_streak = 0;
+        for (int i = 0; i < n; i++) {
+            scanf("%d", &a[i]);
+            if (a[i] > 0) {
+                current_streak += 1;
+                if (max_streak < current_streak) {
+                    max_streak = current_streak;
+                }
+            } else {
+                current_streak = 0;
+            }
+        }
+        printf("%d\n", max_streak);
+    }
+    return 0;
+}
+//python
+def solve():
+    n=int(input())
+    li=list(map(int,input().split()))
+    max_streak = 0
+    count=0
+    for i in range(n):
+        if(li[i]>0):
+            count+=1
+            max_streak=max(max_streak,count)
+        else:
+            count=0
+    print(max_streak)
+t=int(input())
+for j in range(t):
+    solve()
