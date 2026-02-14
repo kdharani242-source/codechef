@@ -1,0 +1,24 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int x,y,z;
+	scanf("%d %d %d",&x,&y,&z);
+	if((x+(y*0.5))+(4-(x+y+z))>z+(y*0.5)){
+	    printf("yes\n");
+	}
+	else{
+	    printf("no\n");
+	}
+
+}
+
+//python
+# cook your dish here
+x,y,z=map(int,input().split())
+remaining_games = 4 - (x+ y + z)
+if(x+(y*0.5)+remaining_games>z+(y*0.5)):
+    print("yes")
+else:
+    print("no")
