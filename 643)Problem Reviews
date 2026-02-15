@@ -1,0 +1,44 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int n;
+	    scanf("%d",&n);
+	    int arr[n];
+	    int count=0;
+	    for(int i=0;i<n;i++){
+	        scanf("%d",&arr[i]);
+	        if(arr[i]>4){
+	            count+=1;
+	        }
+	    }
+	    if(count==n){
+	        printf("yes\n");
+	    }
+	    else{
+	        printf("no\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+def solve():
+    count=0
+    n=int(input())
+    li=list(map(int,input().split()))
+    for i in range(n):
+        if(li[i]>4):
+            count+=1
+    if(count==n):
+        print("yes")
+    else:
+        print("no")
+t=int(input())
+for j in range(t):
+    solve()
