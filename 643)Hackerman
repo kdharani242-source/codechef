@@ -1,0 +1,49 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int x,y;
+	    scanf("%d %d",&x,&y);
+	    int sum_val=x+y;
+	    int count=0;
+	    if(sum_val>1){
+	        for (int j=2;j<=sqrt(sum_val);j++){
+	            if(sum_val%j==0){
+	                count+=1;
+	                break;
+	            }
+	        }
+	        if(count==0){
+	            printf("alice\n");
+	        }
+	        else{
+	            printf("bob\n");
+	        }
+	    }
+	    else{
+	        printf("bob\n");
+	    }
+	}
+}
+
+//python
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    sum_val = x + y
+    count = 0
+    if sum_val > 1:
+        for j in range(2, int(sum_val**0.5) + 1):
+            if (sum_val % j) == 0:
+                count += 1
+                break
+        if count == 0:
+            print("Alice")
+        else:
+            print("Bob")
+    else:
+        print("Bob")
