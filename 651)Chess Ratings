@@ -1,0 +1,29 @@
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    if((y-x)%8==0):
+        print((y-x)//8)
+    else:
+        print(((y-x)//8)+1)
+    //c
+    #include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int x,y;
+	    scanf("%d %d",&x,&y);
+	    if((y-x)%8==0){
+	        printf("%d\n",(y-x)/8);
+	    }
+	    else{
+	        printf("%d\n",((y-x)/8)+1);
+	    }
+	}
+
+}
+
