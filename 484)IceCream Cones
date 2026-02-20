@@ -1,0 +1,26 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int x,y,n;
+	    scanf("%d %d %d",&x,&y,&n);
+	    if(0>(x-(n*y))){
+	        printf("%d\n",0);
+	    }
+	    else{
+	        printf("%d\n",(x-(n*y)));
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    x,y,n=map(int,input().split())
+    print(max(0,x-(n*y)))
