@@ -1,0 +1,29 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int n;
+	    scanf("%d",&n);
+	    if(n>=4){
+	        printf("%d\n",(n*3)-3);
+	    }
+	    else{
+	        printf("%d\n",-1);
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    n=int(input())
+    if(n>=4):
+        print(3*n-3)
+    else:
+        print(-1)
