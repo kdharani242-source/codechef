@@ -1,0 +1,45 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int x,y;
+	    scanf("%d %d",&x,&y);
+	    int count=0;
+	    int num=0;
+	    for(int i=1;i<11;i++){
+	        if((x+y+i)>=21){
+	            count+=1;
+	            num=i;
+	            break;
+	        }
+	    }
+	    if(count>=1){
+	        printf("%d\n",num);
+	    }
+	    else{
+	        printf("%d\n",-1);
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    count=0
+    num=0
+    for j in range(1,11):
+        if((x+y+j)>=21):
+            count+=1
+            num=j
+            break
+    if(count>=1):
+        print(j)
+    else:
+        print(-1)
