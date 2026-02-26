@@ -1,0 +1,23 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int n;
+	scanf("%d",&n);
+	if(1000<(n*200)){
+	    printf("%d",1000);
+	}
+	else{
+	    printf("%d",n*200);
+	}
+
+}
+
+//python
+# cook your dish here
+n=int(input())
+if(1000<n*200):
+    print(1000)
+else:
+    print(n*200)
