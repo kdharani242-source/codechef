@@ -1,0 +1,65 @@
+//c
+#include <stdio.h>
+
+int main() {
+    int t;
+    scanf("%d", &t);
+
+    while (t--) {
+        int n;
+        scanf("%d", &n);
+        char s[101];
+        char c[101];
+
+        for (int i = 0; i < n; i++) {
+            scanf(" %c", &s[i]); // Read a single character, skipping leading whitespace
+
+            if (s[i] == 'A') {
+                c[i] = 'T';
+            } else if (s[i] == 'T') {
+                c[i] = 'A';
+            } else if (s[i] == 'C') {
+                c[i] = 'G';
+            } else {
+                c[i] = 'C';
+            }
+        }
+        c[n] = '\0'; // Null-terminate the string
+        printf("%s\n", c); // Print the complemented string
+    }
+
+    return 0;
+}
+
+//python
+#include <stdio.h>
+
+int main() {
+    int t;
+    scanf("%d", &t);
+
+    while (t--) {
+        int n;
+        scanf("%d", &n);
+        char s[101];
+        char c[101];
+
+        for (int i = 0; i < n; i++) {
+            scanf(" %c", &s[i]); // Read a single character, skipping leading whitespace
+
+            if (s[i] == 'A') {
+                c[i] = 'T';
+            } else if (s[i] == 'T') {
+                c[i] = 'A';
+            } else if (s[i] == 'C') {
+                c[i] = 'G';
+            } else {
+                c[i] = 'C';
+            }
+        }
+        c[n] = '\0'; // Null-terminate the string
+        printf("%s\n", c); // Print the complemented string
+    }
+
+    return 0;
+}
