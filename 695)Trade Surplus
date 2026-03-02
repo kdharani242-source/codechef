@@ -1,0 +1,31 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int a1,a2,b1,b2;
+	    scanf("%d %d %d %d",&a1,&a2,&b1,&b2);
+	    if(((a1-a2)+(b1-b2))<0){
+	        printf("yes\n");
+	    }
+	    else{
+	        printf("no\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    a1,a2,b1,b2=map(int,input().split())
+    c=a1-a2
+    d=b1-b2
+    if(c+d<0):
+        print("yes")
+    else:
+        print("no")
