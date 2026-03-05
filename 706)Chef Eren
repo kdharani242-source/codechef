@@ -1,0 +1,32 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int n,a,b;
+	    scanf("%d %d %d",&n,&a,&b);
+	    if(n%2==0){
+	        printf("%d\n",((n/2)*a)+((n/2)*b));
+	    }
+	    else{
+	        printf("%d\n",((n/2)*a)+(((n/2)+1)*b));
+	    }
+	    
+	}
+
+}
+
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    n,a,b=map(int,input().split())
+    if n % 2 == 0:
+        total_duration = (n // 2) * a + (n // 2) * b
+    else:
+        total_duration = (n // 2) * a + (n // 2 + 1) * b
+    print(total_duration)
