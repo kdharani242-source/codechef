@@ -1,0 +1,63 @@
+//c
+#include <stdio.h>
+
+int main() {
+    int t;
+    // Read the number of test cases
+    if (scanf("%d", &t) != 1) return 0;
+
+    while (t--) {
+        int x, n;
+        // Read X (current planes) and N (passengers)
+        scanf("%d %d", &x, &n);
+
+        // Calculate total planes needed for N passengers
+        // (n + 99) / 100 is equivalent to ceil(n / 100.0)
+        int total_needed = (n + 99) / 100;
+
+        // Calculate additional planes
+        int extra_planes = total_needed - x;
+
+        // If extra_planes is negative, it means we already have enough
+        if (extra_planes < 0) {
+            extra_planes = 0;
+        }
+
+        printf("%d\n", extra_planes);
+    }
+
+    return 0;
+}
+
+
+//pytjon
+\
+#include <stdio.h>
+
+int main() {
+    int t;
+    // Read the number of test cases
+    if (scanf("%d", &t) != 1) return 0;
+
+    while (t--) {
+        int x, n;
+        // Read X (current planes) and N (passengers)
+        scanf("%d %d", &x, &n);
+
+        // Calculate total planes needed for N passengers
+        // (n + 99) / 100 is equivalent to ceil(n / 100.0)
+        int total_needed = (n + 99) / 100;
+
+        // Calculate additional planes
+        int extra_planes = total_needed - x;
+
+        // If extra_planes is negative, it means we already have enough
+        if (extra_planes < 0) {
+            extra_planes = 0;
+        }
+
+        printf("%d\n", extra_planes);
+    }
+
+    return 0;
+}
