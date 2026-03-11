@@ -1,0 +1,21 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int x,y;
+	    scanf("%d %d",&x,&y);
+	    printf("%d\n",abs(((x-1)/10)-((y-1)/10)));
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    print(abs(((x-1)//10)-((y-1)//10)))
