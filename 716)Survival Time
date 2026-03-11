@@ -1,0 +1,21 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int n,x,d;
+	    scanf("%d %d %d",&n,&x,&d);
+	    printf("%d\n",((n/(x*5))+d));
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    n,x,d=map(int,input().split())
+    print((n//(x*5))+d)
