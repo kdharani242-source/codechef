@@ -1,0 +1,28 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int a,b;
+	scanf("%d %d",&a,&b);
+	if(a==1 && b==1){
+	    printf("https://discuss.codechef.com");
+	}
+	else if(a==1 && b==0){
+	    printf("https://www.codechef.com/contests");
+	}
+    else{
+        printf("https://www.codechef.com/practice");
+    }
+
+}
+
+//python
+a,b=map(int,input().split())
+if(a==1 and b==1):
+    print("https://discuss.codechef.com")
+elif(a==1 and b==0):
+    print('https://www.codechef.com/contests')
+else:
+    print('https://www.codechef.com/practice')
+
