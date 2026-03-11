@@ -1,0 +1,34 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int a,x,b,y;
+	    scanf("%d %d %d %d",&a,&x,&b,&y);
+	    if(a*y>b*x){
+	        printf("alice\n");
+	    }
+	    else if(a*y<b*x){
+	        printf("bob\n");
+	    }
+	    else{
+	        printf("equal\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    a,x,b,y=map(int,input().split())
+    if(a*y>b*x):
+        print("alice")
+    elif(a*y<b*x):
+        print('bob')
+    else:
+        print('equal')
