@@ -1,0 +1,53 @@
+//c
+#include <stdio.h>
+
+int main() {
+    int t;
+    if (scanf("%d", &t) != 1) return 0;
+    
+    while (t--) {
+        int n, k;
+        scanf("%d %d", &n, &k);
+        
+        int current_calories = 0;
+        int sweets_eaten = 0;
+        int can_eat_more = 1; // Flag to check if we can still eat
+
+        for (int i = 0; i < n; i++) {
+            int calorie;
+            scanf("%d", &calorie);
+            
+            // If we can still eat and this sweet doesn't exceed the limit
+            if (can_eat_more && (current_calories + calorie <= k)) {
+                current_calories += calorie;
+                sweets_eaten++;
+            } else {
+                // Once we hit the limit, stop incrementing but continue the loop
+                can_eat_more = 0;
+            }
+        }
+        printf("%d\n", sweets_eaten);
+    }
+    return 0;
+}
+
+
+//python
+# cook your dish here
+def solve():
+    n,k=map(int,input().split())
+    li=list(map(int,input().split()))
+    count=0
+    sweets=0
+    for i in range(n):
+        if(count+li[i]<=k):
+            count+=li[i]
+            sweets+=1
+        else:
+            break
+    print(sweets)
+t=int(input())
+for _ in range(t):
+    solve()
+            
+        
