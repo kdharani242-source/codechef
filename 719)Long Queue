@@ -1,0 +1,87 @@
+//c
+#include <stdio.h>
+
+void solve() {
+    int n;
+    // Read the number of people in the queue
+    if (scanf("%d", &n) != 1) return;
+
+    int a[n];
+    // Read the wealth of all N people
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    // Sushil is the last person in the array
+    int sushil_wealth = a[n - 1];
+    
+    // Sushil's starting position is N (1-indexed)
+    int current_position = n;
+
+    // Check people starting from the one directly in front (index n-2)
+    // back to the first person (index 0)
+    for (int i = n - 2; i >= 0; i--) {
+        // Condition: Person in front wealth <= half of Sushil's wealth
+        if (a[i] <= sushil_wealth / 2) {
+            // Sushil bullies them and moves forward
+            current_position--;
+        } else {
+            // Stop if the person in front cannot be bullied
+            break;
+        }
+    }
+
+    // Output the final position
+    printf("%d\n", current_position);
+}
+
+int main() {
+    int t;
+    // Read number of test cases
+    if (scanf("%d", &t) != 1) return 0;
+    
+    while (t--) {
+        solve();
+    }
+    
+    return 0;
+}
+
+
+
+//python
+import sys
+
+def solve():
+    # Read the number of test cases
+    t_str = sys.stdin.readline().strip()
+    if not t_str:
+        return
+    t = int(t_str)
+    
+    for _ in range(t):
+        # Read N
+        n = int(sys.stdin.readline().strip())
+        # Read wealth of all N people
+        a = list(map(int, sys.stdin.readline().split()))
+        
+        # Sushil is the last person in the list
+        sushil_wealth = a[n-1]
+        
+        # Sushil's initial position is N
+        current_position = n
+        
+        # Check people starting from the one directly in front (index n-2)
+        # down to the first person (index 0)
+        for i in range(n-2, -1, -1):
+            if a[i] <= sushil_wealth // 2:
+                # If they can be bullied, Sushil moves forward
+                current_position -= 1
+            else:
+                # If the person in front is too wealthy, Sushil stops
+                break
+        
+        print(current_position)
+
+if __name__ == "__main__":
+    solve()
