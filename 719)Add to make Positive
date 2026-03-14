@@ -1,0 +1,67 @@
+//python
+# cook your dish here
+import sys
+
+def solve():
+    # Read the number of test cases
+    input_data = sys.stdin.read().split()
+    if not input_data:
+        return
+    
+    T = int(input_data[0])
+    pointer = 1
+    
+    for _ in range(T):
+        N = int(input_data[pointer])
+        pointer += 1
+        
+        # Read the array elements
+        A = list(map(int, input_data[pointer:pointer + N]))
+        pointer += N
+        
+        current_sum = sum(A)
+        
+        # Start X from 0 and increment until the condition is met
+        X = 0
+        while current_sum + (N * X) < 0:
+            X += 1
+            
+        print(X)
+
+if __name__ == "__main__":
+    solve()
+
+
+
+    //c
+    #include <stdio.h>
+
+int main() {
+    int T;
+    // Read the number of test cases
+    if (scanf("%d", &T) != 1) return 0;
+
+    while (T--) {
+        int N;
+        // Read the size of the array
+        if (scanf("%d", &N) != 1) break;
+
+        long long current_sum = 0;
+        for (int i = 0; i < N; i++) {
+            int element;
+            scanf("%d", &element);
+            current_sum += element;
+        }
+
+        int X = 0;
+        // Increment X until the sum becomes non-negative
+        // The condition S + N*X >= 0 must be met
+        while (current_sum + (long long)N * X < 0) {
+            X++;
+        }
+
+        printf("%d\n", X);
+    }
+
+    return 0;
+}
