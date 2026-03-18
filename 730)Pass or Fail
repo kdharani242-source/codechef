@@ -1,0 +1,29 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int n,x,p;
+	    scanf("%d %d %d",&n,&x,&p);
+	    if((3*x)-(n-x)>=p){
+	        printf("pass\n");
+	    }
+	    else{
+	        printf("fail\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    n,x,p=map(int,input().split())
+    if((3*x)-(n-x)>=p):
+        print("pass")
+    else:
+        print("fail")
