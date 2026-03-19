@@ -1,0 +1,23 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int n;
+	scanf("%d",&n);
+	if(n%3==0){
+	    printf("yes");
+	}
+	else{
+	    printf("no");
+	}
+
+}
+
+//python
+# cook your dish here
+n=int(input())
+if(n%3==0):
+    print('yes')
+else:
+    print('no')
