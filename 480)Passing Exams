@@ -1,0 +1,29 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int a,b,c;
+	    scanf("%d %d %d",&a,&b,&c);
+	    if((a>=50 && b>=50 && c>=50) || (a>=50 && b>=50 && c<=50) || (a>=50 && b<=50 && c>=50) || (a<=50 && b>=50 && c>=50)){
+	        printf("yes\n");
+	    }
+	    else{
+	        printf("no\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    a,b,c=map(int,input().split())
+    if((a>=50 and b>=50 and c>=50) or (a>=50 and b>=50 and c<=50) or (a>=50 and b<=50 and c>=50) or (a<=50 and b>=50 and c>=50)):
+        print("yes")
+    else:
+        print("no")
