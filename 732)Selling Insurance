@@ -1,0 +1,27 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int x;
+	    scanf("%d",&x);
+	    int min_insurances = (500 + x - 1) / x;
+        
+	    printf("%d\n", min_insurances);
+	    
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    n=int(input())
+    if((100/(n*0.2))%1==0):
+        print("{:.0f}".format(100/(n*0.2)))
+    else:
+        print("{:.0f}".format((100//(n*0.2))+1))
