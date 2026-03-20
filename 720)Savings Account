@@ -1,0 +1,34 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int x,y,z;
+	    scanf("%d %d %d",&x,&y,&z);
+	    if(x*y<=z){
+	        printf("%d\n",0);
+	    }
+	    else{
+	        int excess_amount=(x*y)-z;
+	        int sourcess_reduce=(excess_amount+y-1)/y;
+	        printf("%d\n",sourcess_reduce);
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    x,y,z=map(int,input().split())
+    total_income=x*y
+    if(total_income<=z):
+        print(0)
+    else:
+        excess_amount=total_income-z
+        sources_reduce=(excess_amount+y-1)//y
+        print(sources_reduce)
