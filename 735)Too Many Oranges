@@ -1,0 +1,31 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int n,k;
+	    scanf("%d %d",&n,&k);
+	    int min=10*n;
+	    int max=12*n;
+	    if(k>=min && k<=max){
+	        printf("yes\n");
+	    }
+	    else{
+	        printf("no\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    n,k=map(int,input().split())
+    if((10*n)<=k<=(12*n)):
+        print("yes")
+    else:
+        print("no")
