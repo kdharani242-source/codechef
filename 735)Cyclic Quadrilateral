@@ -1,0 +1,29 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int  a,b,c,d;
+	    scanf("%d %d %d %d",&a,&b,&c,&d);
+	    if(a+c==180 && b+d==180){
+	        printf("yes\n");
+	    }
+	    else{
+	        printf("no\n");
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    a,b,c,d=map(int,input().split())
+    if(a+c==180 and b+d==180):
+        print("yes")
+    else:
+        print("no")
