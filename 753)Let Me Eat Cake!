@@ -1,0 +1,25 @@
+//python
+t = int(input())
+for _ in range(t):
+    total_eaten = 0
+    A, B = map(int, input().split())
+
+    # Keep looping as long as Alice and Bob have a different number of slices
+    while A != B:
+        slices_eaten_this_step = 0
+        
+        if A > B:
+            # Alice has more slices. Charlie eats half of A, rounded up.
+            # Ceiling division: (A + 1) // 2
+            slices_eaten_this_step = (A + 1) // 2
+            A -= slices_eaten_this_step
+            
+        elif B > A:
+            # Bob has more slices. Charlie eats half of B, rounded up.
+            slices_eaten_this_step = (B + 1) // 2
+            B -= slices_eaten_this_step
+            
+        # Add the slices eaten in this step to the total count
+        total_eaten += slices_eaten_this_step
+        
+    print(total_eaten)
