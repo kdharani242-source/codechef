@@ -1,0 +1,21 @@
+//python
+# cook your dish here
+def solve():
+    n = int(input())
+    c = list(map(int, input().split()))
+    
+    red_count = c.count(1)
+    blue_count = c.count(2)
+    
+    if n % 2 != 0:
+        print("No")
+        return
+    
+    if red_count <= n // 2 and blue_count <= n // 2:
+        print("Yes")
+    else:
+        print("No")
+
+t = int(input())
+for _ in range(t):
+    solve()
