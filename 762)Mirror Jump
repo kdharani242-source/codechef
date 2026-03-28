@@ -1,0 +1,29 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int n,k;
+	    scanf("%d %d",&n,&k);
+	    if(k<=n/2){
+	        printf("%d\n",k);
+	    }
+	    else{
+	        printf("%d\n",n-k);
+	    }
+	}
+
+}
+
+//python
+# cook your dish here
+t=int(input())
+for i in range(t):
+    n,k=map(int,input().split())
+    if(k<=n//2):
+        print(k)
+    else:
+        print(n-k)
