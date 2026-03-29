@@ -1,0 +1,28 @@
+//python
+# cook your dish here
+import sys
+
+def solve():
+    # Read R, O, C from a single line of input
+    try:
+        R, O, C = map(int, sys.stdin.readline().split())
+    except:
+        # Handle case where input might be empty or incorrect format
+        return
+
+    # Calculate the number of remaining overs
+    remaining_overs = 20 - O
+
+    # Maximum runs possible in the remaining overs (36 runs per over)
+    max_runs_remaining = remaining_overs * 36
+
+    # Maximum total score Team B can achieve
+    max_total_score_B = C + max_runs_remaining
+
+    # Check if the maximum score is strictly greater than R
+    if max_total_score_B > R:
+        print("YES")
+    else:
+        print("NO")
+
+solve()
