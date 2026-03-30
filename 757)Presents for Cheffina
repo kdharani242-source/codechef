@@ -1,0 +1,49 @@
+//python
+# cook your dish here
+import sys
+import io
+
+# Set up input reading from standard input
+# This setup is generally faster for competitive programming environments
+# input = sys.stdin.read
+
+def solve():
+    # Read all input data at once
+    data = sys.stdin.read().split()
+    
+    if not data:
+        return
+
+    # The first element is T, the number of test cases
+    try:
+        T = int(data[0])
+    except IndexError:
+        return # Handle empty input case gracefully
+
+    results = []
+    # Start reading N values from the second element (index 1)
+    current_data_index = 1
+    
+    for _ in range(T):
+        if current_data_index >= len(data):
+            break # Safety break if input is shorter than expected T
+            
+        try:
+            N = int(data[current_data_index])
+            current_data_index += 1
+        except ValueError:
+            # Should not happen with valid input, but good practice
+            continue
+
+        # Calculate the number of free gifts: floor(N / 5)
+        free_gifts = N // 5
+        
+        # The minimum cost is the total gifts minus the free ones
+        min_cost = N - free_gifts
+        
+        results.append(str(min_cost))
+
+    # Print all results separated by newlines
+    sys.stdout.write('\n'.join(results) + '\n')
+
+solve()
