@@ -1,0 +1,53 @@
+//python
+def solve():
+    try:
+        # Read N
+        N = int(input())
+        # Read the counts A_i
+        A = list(map(int, input().split()))
+        
+        # The minimum number of boxes required is the maximum count of any single color.
+        if not A:
+            print(0)
+        else:
+            print(max(A))
+            
+    except EOFError:
+        return
+    except Exception:
+        return
+
+# Read T
+try:
+    T = int(input())
+    for _ in range(T):
+        solve()
+except EOFError:
+    pass
+except Exception:
+    pass
+
+
+
+    //c
+    #include <stdio.h>
+
+int main() {
+    int t;
+    scanf("%d", &t); // Read the number of test cases
+    while (t--) {
+        int n;
+        scanf("%d", &n); // Read the number of colors
+        int max_value = 0; // Initialize max_value
+        for (int i = 0; i < n; i++) {
+            int num;
+            scanf("%d", &num); // Read the count for color i
+            if (num > max_value) { // Update max_value if the current count is greater
+                max_value = num;
+            }
+        }
+        printf("%d\n", max_value); // The minimum number of boxes is the maximum count found
+    }
+    return 0;
+}
+    
