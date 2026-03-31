@@ -1,0 +1,92 @@
+//python
+# cook your dish here
+import sys
+
+def solve():
+    # Read N and K from the first line of the test case input
+    try:
+        # Reading from stdin using sys.stdin.readline is often faster in competitive programming
+        line1 = sys.stdin.readline().split()
+        if not line1:
+            return
+        N = int(line1[0])
+        K = int(line1[1])
+    except:
+        return
+
+    # Read the N characteristic values from the second line
+    try:
+        characteristics = list(map(int, sys.stdin.readline().split()))
+    except:
+        return
+
+    ans = 0
+    
+    # Iterate through all N characteristic values
+    for a in characteristics:
+        # Check if (a + K) is divisible by 7
+        if (a + K) % 7 == 0:
+            ans += 1
+            
+    # Output the result
+    print(ans)
+
+def main():
+    try:
+        # Read the number of test cases T
+        T_line = sys.stdin.readline()
+        if not T_line:
+            return
+        T = int(T_line)
+    except:
+        return
+
+    # Process each test case
+    for _ in range(T):
+        solve()
+
+if __name__ == "__main__":
+    main()
+
+
+    //c
+    #include <stdio.h>
+
+void solve() {
+    int N, K;
+    // Read N (number of minions) and K (the value to add)
+    if (scanf("%d %d", &N, &K) != 2) return;
+
+    int ans = 0; // Initialize the count of Wolverine-like minions for this test case
+
+    // Loop through all N minions
+    for (int i = 0; i < N; i++) {
+        int characteristic_value;
+        // Read the initial characteristic value
+        if (scanf("%d", &characteristic_value) != 1) return;
+
+        // Calculate the new characteristic value (A + K)
+        int new_value = characteristic_value + K;
+
+        // Check if the new value is divisible by 7
+        if (new_value % 7 == 0) {
+            ans++;
+        }
+    }
+
+    // Output the result for this test case
+    printf("%d\n", ans);
+}
+
+int main() {
+    int T;
+    // Read the number of test cases
+    if (scanf("%d", &T) != 1) return 1;
+
+    // Process each test case
+    while (T--) {
+        solve();
+    }
+
+    return 0;
+}
