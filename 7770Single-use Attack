@@ -1,0 +1,46 @@
+//python
+# cook your dish here
+import sys
+
+def solve():
+    # Read number of test cases
+    t = int(sys.stdin.readline())
+    for _ in range(t):
+        h, x, y = map(int, sys.stdin.readline().split())
+        
+        # Health remaining after special attack
+        remaining_h = h - y
+        
+        # Ceiling division using integer arithmetic
+        # (remaining_h + x - 1) // x
+        normal_attacks = (remaining_h + x - 1) // x
+        
+        # Total attacks is 1 (special) + number of normal attacks
+        print(1 + normal_attacks)
+
+if __name__ == '__main__':
+    solve()
+
+
+    //c
+    #include <stdio.h>
+
+int main() {
+    int t;
+    scanf("%d", &t);
+    while (t--) {
+        int h, x, y;
+        scanf("%d %d %d", &h, &x, &y);
+        
+        // Remaining health after special attack
+        int remaining_h = h - y;
+        
+        // Calculate ceiling division for normal attacks
+        // (remaining_h + x - 1) / x handles the ceiling logic
+        int normal_attacks = (remaining_h + x - 1) / x;
+        
+        // Total attacks = 1 (special) + normal_attacks
+        printf("%d\n", 1 + normal_attacks);
+    }
+    return 0;
+}
