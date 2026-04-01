@@ -1,0 +1,39 @@
+//python
+# cook your dish here
+import sys
+
+def solve():
+    # Read N
+    try:
+        line1 = sys.stdin.readline()
+        if not line1:
+            return
+        n = int(line1.strip())
+        
+        # Read array A
+        a = list(map(int, sys.stdin.readline().split()))
+    except ValueError:
+        return
+
+    # If N is odd, sum can never be 0
+    if n % 2 != 0:
+        print("-1")
+        return
+
+    # Count the number of 1s
+    count_ones = a.count(1)
+    
+    # We need exactly n // 2 ones to make the sum 0
+    # The number of flips needed is the absolute difference
+    print(abs(count_ones - n // 2))
+
+def main():
+    line = sys.stdin.readline()
+    if not line:
+        return
+    t = int(line.strip())
+    for _ in range(t):
+        solve()
+
+if __name__ == '__main__':
+    main()
