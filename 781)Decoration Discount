@@ -1,0 +1,31 @@
+//python
+# cook your dish here
+import sys
+
+def solve():
+    # Read number of test cases
+    t = int(sys.stdin.readline())
+    for _ in range(t):
+        n = int(sys.stdin.readline())
+        a = list(map(int, sys.stdin.readline().split()))
+        
+        # Initialize min_cost with a large value
+        min_cost = float('inf')
+        
+        # Iterate through all pairs (i, j)
+        for i in range(n):
+            for j in range(i + 1, n):
+                if j == i + 1:
+                    # Adjacent: apply discount to the second vase
+                    current_cost = a[i] + (a[j] // 2)
+                else:
+                    # Non-adjacent: full price
+                    current_cost = a[i] + a[j]
+                
+                if current_cost < min_cost:
+                    min_cost = current_cost
+                    
+        print(min_cost)
+
+if __name__ == '__main__':
+    solve()
