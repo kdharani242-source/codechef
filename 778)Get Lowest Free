@@ -1,0 +1,9 @@
+//python
+# cook your dish 
+def solve():
+    a,b,c=map(int,input().split())
+    min_abc=min(a,b,c)
+    print(a+b+c-min_abc)
+t=int(input())
+for i in range(t):
+    solve()
