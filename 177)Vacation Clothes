@@ -1,0 +1,23 @@
+//c
+#include <stdio.h>
+
+int main() {
+    // Read the number of days from input
+    int n;
+    scanf("%d",&n);
+    if(n<=7){
+        printf("%d\n",n);
+    }
+    else{
+        printf("%d\n",7);
+    }
+
+
+}
+
+//python
+# cook your dish here
+n = int(input())
+
+# The minimum sets required is the smaller of n and 7
+print(min(n, 7))
