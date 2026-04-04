@@ -1,0 +1,81 @@
+//c
+#include <stdio.h>
+#include <stdbool.h>
+
+void solve() {
+    int n, d;
+    if (scanf("%d %d", &n, &d) != 2) return;
+
+    // Initially, we hold the close-range gun (is_close = true)
+    bool current_is_close = true;
+    int switches = 0;
+
+    for (int i = 0; i < n; i++) {
+        int a;
+        scanf("%d", &a);
+        
+        // Determine if the current target needs the close-range gun
+        bool target_needs_close = (a <= d);
+
+        // If the needed gun differs from the current one, we switch
+        if (target_needs_close != current_is_close) {
+            switches++;
+            current_is_close = target_needs_close;
+        }
+    }
+    printf("%d\n", switches);
+}
+
+int main() {
+    int t;
+    if (scanf("%d", &t) != 1) return 0;
+    while (t--) {
+        solve();
+    }
+    return 0;
+}
+
+
+//python
+# cook your dish here
+import sys
+
+def solve():
+    # Read all input at once for faster execution
+    input_data = sys.stdin.read().split()
+    idx = 0
+    
+    t = int(input_data[idx])
+    idx += 1
+    
+    results = []
+    for _ in range(t):
+        n = int(input_data[idx])
+        d = int(input_data[idx + 1])
+        idx += 2
+        
+        # We start with the close-range gun, which is effective for <= D.
+        # Let's represent the gun state as a boolean: 
+        # True if <= D (close-range), False if > D (long-range).
+        # Initially, we are holding the close-range gun (True).
+        current_gun_is_close = True
+        switches = 0
+        
+        for i in range(n):
+            a_i = int(input_data[idx])
+            idx += 1
+            
+            # Determine which gun is needed for this target
+            target_needs_close = (a_i <= d)
+            
+            # If the required gun differs from the one we are holding, switch
+            if target_needs_close != current_gun_is_close:
+                switches += 1
+                current_gun_is_close = target_needs_close
+        
+        results.append(str(switches))
+    
+    sys.stdout.write("\n".join(results) + "\n")
+
+if __name__ == '__main__':
+    solve()
