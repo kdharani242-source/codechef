@@ -1,0 +1,38 @@
+//c
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int x,y;
+	    scanf("%d %d",&x,&y);
+	    int count=x;
+	    for(int i=0;i<y;i++){
+	        if(count*2<count+1000){
+	            count+=1000;
+	        }
+	        else{
+	            count*=2;
+	        }
+	    }
+	    printf("%d\n",count);
+	}
+
+}
+
+//python
+# cook your dish here
+def solve():
+    x,y=map(int,input().split())
+    count=x
+    for i in range(y):
+        if(count*2<=count+1000):
+            count+=1000
+        else:
+            count=count*2
+    print(count)
+t=int(input())
+for _ in range(t):
+    solve()
