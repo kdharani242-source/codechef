@@ -1,0 +1,24 @@
+//python
+# cook your dish here
+import sys
+
+def solve():
+    # Read the number of test cases
+    t = int(sys.stdin.readline())
+    
+    for _ in range(t):
+        # Read n, a, b
+        n, a, b = map(int, sys.stdin.readline().split())
+        
+        # Calculate the number of rounds (k)
+        # For N=4 (2^2), bit_length is 3, so 3-1 = 2 rounds
+        rounds = n.bit_length() - 1
+        
+        # Total time formula: (rounds * A) + (breaks * B)
+        # There are (rounds - 1) breaks
+        total_time = (rounds * a) + ((rounds - 1) * b)
+        
+        print(total_time)
+
+if __name__ == '__main__':
+    solve()
