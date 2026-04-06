@@ -1,0 +1,47 @@
+//c
+#include <stdio.h>
+
+int main() {
+    int t;
+    if (scanf("%d", &t) != 1) return 0;
+    while(t--) {
+        int n;
+        scanf("%d", &n);
+        int s[n], d[n];
+        
+        // Read the supply array
+        for(int i = 0; i < n; i++) {
+            scanf("%d", &s[i]);
+        }
+        
+        // Read the demand array
+        for(int i = 0; i < n; i++) {
+            scanf("%d", &d[i]);
+        }
+        
+        // Compare elements
+        int count = 0;
+        for(int i = 0; i < n; i++) {
+            if(s[i] == d[i]) {
+                count++;
+            }
+        }
+        printf("%d\n", count);
+    }
+    return 0;
+}
+
+//python
+# cook your dish here
+def solve():
+    n=int(input())
+    li=list(map(int,input().split()))
+    li2=list(map(int,input().split()))
+    count=0
+    for i in range(n):
+        if(li[i]==li2[i]):
+            count+=1
+    print(count)
+t=int(input())
+for _ in range(t):
+    solve()
