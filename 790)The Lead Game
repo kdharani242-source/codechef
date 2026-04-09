@@ -1,0 +1,66 @@
+//c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    if (scanf("%d", &n) != 1) return 0;
+
+    int player1_total = 0;
+    int player2_total = 0;
+    int max_lead = 0;
+    int winner = 0;
+
+    for (int i = 0; i < n; i++) {
+        int s, t;
+        scanf("%d %d", &s, &t);
+
+        // Update cumulative scores
+        player1_total += s;
+        player2_total += t;
+
+        // Calculate current lead
+        int current_diff = player1_total - player2_total;
+        int abs_diff = abs(current_diff);
+
+        // Update global max_lead and winner
+        if (abs_diff > max_lead) {
+            max_lead = abs_diff;
+            winner = (current_diff > 0) ? 1 : 2;
+        }
+    }
+
+    printf("%d %d\n", winner, max_lead);
+
+    return 0;
+}
+
+
+//python
+# cook your dish here
+n = int(input())
+
+max_lead = 0
+winner = 0
+player1_total = 0
+player2_total = 0
+
+for _ in range(n):
+    # Read scores for current round
+    s, t = map(int, input().split())
+    
+    # Update cumulative scores
+    player1_total += s
+    player2_total += t
+    
+    # Calculate current difference
+    diff = player1_total - player2_total
+    
+    # Determine absolute lead and current leader
+    if abs(diff) > max_lead:
+        max_lead = abs(diff)
+        # If diff > 0, Player 1 is leading; else Player 2
+        winner = 1 if diff > 0 else 2
+
+# Output the winner and the maximum lead
+print(f"{winner} {max_lead}")
