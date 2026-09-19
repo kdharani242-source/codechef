@@ -1,0 +1,12 @@
+def solve():
+    a, b, c = map(int, input().split())
+    # Try every integer K from 2 to 99
+    for k in range(2, 100):
+        # Check if k does not divide any of the numbers
+        if a % k != 0 and b % k != 0 and c % k != 0:
+            print(k)
+            return
+
+t = int(input())
+for _ in range(t):
+    solve()
