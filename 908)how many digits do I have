@@ -1,0 +1,23 @@
+HOW MANY DIGITS DO I HAVE
+Write a program to obtain a number 
+(N) from the user and display whether the number is a one digit number, 2 digit number, 3 digit number or more than 3 digit number
+
+
+N = int(input())
+
+N = abs(N)
+
+if N < 10:
+    print(1)
+elif N < 100:
+    print(2)
+elif N < 1000:
+    print(3)
+else:
+    print("More than 3 digits")
+
+
+Input
+Output
+9
+1
